@@ -2,6 +2,7 @@ provider "google" {
   credentials = "${file("service_account.json")}"
   project     = "my-project-id"
   region      = "us-central1"
+  zone        = "us-central1-c"
 }
 resource "google_compute_instance" "default" {
   name         = "test"
